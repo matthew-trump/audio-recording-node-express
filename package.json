@@ -1,0 +1,22 @@
+{
+  "name": "audio-recording-node-express",
+  "version": "1.0.0",
+  "description": "server for receiving and saving audio files from the angular front-end audio recording demo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthew-trump/audio-recording-node-express.git"
+  },
+  "author": "Matthew Trump <matthew.trump@gmail.com> (http://www.decumanus.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthew-trump/audio-recording-node-express/issues"
+  },
+  "homepage": "https://github.com/matthew-trump/audio-recording-node-express#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
