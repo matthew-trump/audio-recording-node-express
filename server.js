@@ -4,6 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const uploadFile = require('./upload-file');
 const uploadGoogleStorage = require('./upload-google-storage');
+const uploadAwsS3 = require('./upload-aws-s3');
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use('/samples', express.static(path.join(__dirname, 'samples')))
 
 app.use("/upload-file", uploadFile);
 app.use("/upload-google-storage", uploadGoogleStorage);
+app.use("/upload-aws-s3", uploadAwsS3);
 
 const PORT = process.env.PORT || 8080;
 
