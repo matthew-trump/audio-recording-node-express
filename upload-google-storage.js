@@ -1,5 +1,4 @@
 const express = require('express');
-const fs = require('fs');
 const multer = require('multer');
 const format = require('util').format;
 const upload = multer({
@@ -20,6 +19,8 @@ const bucket = storage.bucket(GOOGLE_STORAGE_BUCKET_NAME);
 
 
 /** write uploaded buffer to google storage */
+//see https://cloud.google.com/storage/docs/access-control/making-data-public#buckets
+
 router.post('/', upload.single('file'), (req, res) => {
     if (!req.file) {
         console.log("** ERROR: audio upload NO FILE");
