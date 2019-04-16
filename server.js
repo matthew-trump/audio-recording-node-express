@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const upload = require('./upload');
+const uploadFile = require('./upload-file');
+const uploadGoogleStorage = require('./upload-google-storage');
 
 const app = express();
 
@@ -12,7 +13,8 @@ app.use(bodyParser.json());
 app.use('/', express.static(path.join(__dirname, 'public')))
 app.use('/samples', express.static(path.join(__dirname, 'samples')))
 
-app.use("/upload", upload);
+app.use("/upload-file", uploadFile);
+app.use("/upload-google-storage", uploadGoogleStorage);
 
 const PORT = process.env.PORT || 8080;
 
