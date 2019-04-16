@@ -18,6 +18,7 @@
   "homepage": "https://github.com/matthew-trump/audio-recording-node-express#readme",
   "dependencies": {
     "@google-cloud/storage": "^2.5.0",
+    "aws-sdk": "^2.438.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "multer": "^1.4.1"
